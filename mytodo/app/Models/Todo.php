@@ -20,7 +20,7 @@ class Todo extends Model
         $todo = new self();
         $todo->title = $attributes["title"];
         $todo->summary = $attributes["summary"];
-     //   $todo->priority = $attributes["priority"];
+        $todo->priority = $attributes["priority"];
         $todo->save();
         return $todo;
     }
@@ -50,10 +50,10 @@ class Todo extends Model
     public function updateTodo(int $id, array $attributes){
         $todo = $this->getTodo($id);
         if($todo == null){
-            throw new ModelNotFoundException("Cant find todo");
+            throw new ModelNotFoundException("Cant find todo task");
         }
         $todo->title = $attributes["title"];
-        $todo->content = $attributes["summary"];
+        $todo->summary = $attributes["summary"];
         $todo->save();
         return $todo;
     }
