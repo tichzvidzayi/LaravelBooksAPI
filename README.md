@@ -1,4 +1,4 @@
 # LaravelTodoAPI
 
 
-A Laravel todo list API that implements CRUD>
+A Laravel todo list API that implements CRUD
